@@ -34,18 +34,21 @@ main img{
     width: 100px;
     height: 100px;
 }
-main .container{
+.cardsContainer{
+    display: flex;
+}
+main .cardsContainer{
     justify-content: center;
     flex-wrap: wrap;
 }
-main .container .box{
+main .cardsContainer .box{
     width: 117px;
     height: 146px;
     background-color: #A7E9AF;
     margin-bottom:34px;
     margin-right:34px;
 }
-main .container .box img{
+main .cardsContainer .box img{
     margin-top: 24px;
     margin-bottom: 22px;
     margin-left:10px;
@@ -53,14 +56,14 @@ main .container .box img{
 }
 
 @media (max-width: 560px){
-    header .container .desktop{
+    header .cardsContainer .desktop{
         display:none;
     }
-    header .container .box{
+    header .cardsContainer .box{
         flex-direction: column;
         display:flex;
     }
-    header .container .box .mobileBottom{
+    header .cardsContainer .box .mobileBottom{
         /*Usar essa aba pra alinhar a palavra "GAME" no centro na versão mobile*/
     }
 }
