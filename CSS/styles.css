@@ -21,6 +21,9 @@ header h1{
     font-weight: 700;
     font-size:56px;
 }
+header .container .box{
+    display:none;
+}
 
 /*------------------------------------------------------------*/
 main{
@@ -47,4 +50,17 @@ main .container .box img{
     margin-bottom: 22px;
     margin-left:10px;
     margin-right: 7px;
+}
+
+@media (max-width: 560px){
+    header .container .desktop{
+        display:none;
+    }
+    header .container .box{
+        flex-direction: column;
+        display:flex;
+    }
+    header .container .box .mobileBottom{
+        /*Usar essa aba pra alinhar a palavra "GAME" no centro na versão mobile*/
+    }
 }
