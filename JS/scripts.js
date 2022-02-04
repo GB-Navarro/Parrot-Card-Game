@@ -1,7 +1,6 @@
 let numeroDeCartas = 0
 let cardsContainer = document.querySelector(".cardsContainer");
-let arrayCartasTraseiras = ['<div><img src="Imagens/bobrossparrot.gif"/></div>','<div><img src="Imagens/explodyparrot.gif"/></div>','<div><img src="Imagens/fiestaparrot.gif"/></div>','<div><img src="Imagens/metalparrot.gif"/></div>','<div><img src="Imagens/revertitparrot.gif"/></div>','<div><img src="Imagens/tripletsparrot.gif"/></div>','<div><img src="Imagens/unicornparrot.gif"/></div>','<div><img src="Imagens/fiestaparrot.gif"/></div>','<div><img src="Imagens/explodyparrot.gif"/></div>','<div><img src="Imagens/tripletsparrot.gif"/></div>','<div><img src="Imagens/bobrossparrot.gif"/></div>','<div><img src="Imagens/revertitparrot.gif"/></div>','<div><img src="Imagens/unicornparrot.gif"/></div>','<div><img src="Imagens/metalparrot.gif"/></div>'];
-let boxArray = document.querySelectorAll(".box");
+let arrayCartasTraseiras = ['bobrossparrot.gif','explodyparrot.gif','fiestaparrot.gif','metalparrot.gif','revertitparrot.gif','tripletsparrot.gif','unicornparrot.gif','bobrossparrot.gif','explodyparrot.gif','fiestaparrot.gif','metalparrot.gif','revertitparrot.gif','tripletsparrot.gif','unicornparrot.gif'];
 
 do{
     variavelDeControle = prompt("Com quantas cartas você quer jogar ?");
@@ -16,27 +15,22 @@ do{
 function adicionarCartasFrontais(){
     for(let contador = 0; contador < numeroDeCartas; contador ++){
         cardsContainer.innerHTML += 
-        '<div class="box" onclick="adicionarCartasTraseiras()"> <img src="Imagens/front.png"/> </div>';
+        '<div class="box" onclick="adicionarCartasTraseiras()"> <img src="Imagens/front.png" class="front-face"/> <img src="Imagens/${img}" class="back-face"/> </div>';
     }
 }
-
 adicionarCartasFrontais();
+
+let boxArray = document.querySelectorAll(".box .back-face");
+console.log(boxArray);
 
 function embaralharCartasTraseiras(){
     return Math.random() - 0.5; 
 }
 arrayCartasTraseiras.sort(embaralharCartasTraseiras);
 
-function virarAsCartas(){
-    for(let i = 0; i < boxArray.length; i++){
-        boxArray[i].innerHTML = arrayCartasTraseiras[i];
-    }
-}
 function adicionarCartasTraseiras(){
     for(let i = 0; i < boxArray.length; i++){
-        boxArray[i].addEventListener("click",virarAsCartas())
+        boxArray[i].innerHTML = '<img src= Imagens/ + arrayCartasTraseiras[i]"/>'    
     }
 }
-
-
 adicionarCartasTraseiras();
