@@ -30,7 +30,8 @@ arrayCartasTraseiras.sort(embaralharCartasTraseiras);
 
 function adicionarCartasTraseiras(){
     for(let i = 0; i < boxArray.length; i++){
-        boxArray[i].innerHTML = '<img src= Imagens/ + arrayCartasTraseiras[i]"/>'    
+        boxArray[i].innerHTML = `<img src= Imagens/${arrayCartasTraseiras[i]}/>`
     }
 }
 adicionarCartasTraseiras();
+console.log(boxArray);
