@@ -13,25 +13,19 @@ do{
 }while(numeroDeCartas%2 != 0);
 
 function adicionarCartasFrontais(){
-    for(let contador = 0; contador < numeroDeCartas; contador ++){
+    for(let i = 0; i < numeroDeCartas; i ++){
         cardsContainer.innerHTML += 
-        '<div class="box" onclick="adicionarCartasTraseiras()"> <img src="Imagens/front.png" class="front-face"/> <img src="Imagens/${img}" class="back-face"/> </div>';
+        `<div class="box" onclick="adicionarCartasTraseiras()"> <img src="Imagens/front.png" class="front-face"/> <img src="Imagens/${arrayCartasTraseiras[i]}" class="back-face"/> </div>`;
     }
 }
 adicionarCartasFrontais();
-
+console.log(cardsContainer);
+/*
 let boxArray = document.querySelectorAll(".box .back-face");
 console.log(boxArray);
 
 function embaralharCartasTraseiras(){
     return Math.random() - 0.5; 
 }
-arrayCartasTraseiras.sort(embaralharCartasTraseiras);
+arrayCartasTraseiras.sort(embaralharCartasTraseiras);*/
 
-function adicionarCartasTraseiras(){
-    for(let i = 0; i < boxArray.length; i++){
-        boxArray[i].innerHTML = `<img src= Imagens/${arrayCartasTraseiras[i]}/>`
-    }
-}
-adicionarCartasTraseiras();
-console.log(boxArray);
