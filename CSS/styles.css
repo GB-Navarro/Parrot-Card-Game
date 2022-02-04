@@ -54,7 +54,12 @@ main .cardsContainer .box img{
     margin-left:10px;
     margin-right: 7px;
 }
-
+.front-face{
+    position:relative;
+}
+.back-face{
+    position:absolute;
+}
 @media (max-width: 560px){
     header .cardsContainer .desktop{
         display:none;
