@@ -50,16 +50,14 @@ main img{
     transform-style: preserve-3d;
 }
 
-.back-face {
+.backFace {
 transform: rotateY(180deg);
 }
 
-.cardsContainer:hover .back-face {
+.cardsContainer:hover .backFace {
 transform: rotateY(0deg);
 }
 
-.cardsContainer:hover .front-face {
+.cardsContainer:hover .frontFace {
 transform: rotateY(-180deg);
 }
-
-
