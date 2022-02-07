@@ -20,8 +20,8 @@ arrayCartasTraseiras.sort(embaralharCartasTraseiras)
 function adicionarCartasFrontais(){
     for(let i = 0; i < numeroDeCartas; i ++){
         main.innerHTML += 
-        `<div class="cardsContainer">
-            <div class="face frontFace" onclick"virarCartas()">
+        `<div class="cardsContainer" onclick="virarCartas(children)">
+            <div class="face frontFace">
                 <img src="Imagens/front.png"/>
             </div>
             <div class="face backFace">
@@ -32,7 +32,7 @@ function adicionarCartasFrontais(){
 }
 adicionarCartasFrontais();
 
-let cardsContainer = document.querySelector(".cardsContainer");
-let frontFace = document.querySelector(".frontFace");
-let backFace = document.querySelector(".backFace");
-
+function virarCartas(cards){
+    cards[1].classList.toggle("back");
+    cards[0].classList.toggle("front");
+}

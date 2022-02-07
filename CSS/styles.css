@@ -54,10 +54,9 @@ main img{
 transform: rotateY(180deg);
 }
 
-.cardsContainer:hover .backFace {
+.back{
 transform: rotateY(0deg);
 }
-
-.cardsContainer:hover .frontFace {
+.front{
 transform: rotateY(-180deg);
 }
